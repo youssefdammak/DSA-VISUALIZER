@@ -1,4 +1,4 @@
-const data=[240,100,200,270,120,150,270,140,160,210];
+const data=[240,100,200,270,120,150,290,140,160,210];
 const box=document.getElementById('box');
 const button=document.getElementById('sortButton')
 function setBars(box,x){

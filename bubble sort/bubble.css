@@ -13,6 +13,7 @@ h1{
 }
 #box{
     width: 500px;
+    height: 300px;
     border: 3px solid #002B5C;
     padding: 50px;
     display: inline-flex;
@@ -26,6 +27,7 @@ h1{
     margin-bottom: 0;
     margin-left: 5px;
     background-color: #002B5C;
+    transition:0.5s;
 }
 button {
     margin-top: 20px;
