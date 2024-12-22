@@ -7,7 +7,7 @@ function pushToStack(){
     {
         const bar=document.createElement('div');
         bar.className="bar";
-        bar.textContent=stack.length+1;
+        bar.textContent=parseInt(Math.random()*10);
         box.appendChild(bar);
         stack.push(stack.length+1);
     }
