@@ -1,6 +1,6 @@
 body{
-    margin: 0;
-    padding: 0;
+    margin: 0;/*remove the initial margin*/
+    padding: 0;/*remove the initial padding*/
     background-color: #F5F5F5;
 }
 h1{
@@ -13,33 +13,32 @@ h1{
 }
 .grid-container{
     padding: 50px;
-    display: grid;
+    display: grid;/*two-dimensional layout*/
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 100px;
     row-gap: 100px;
 }
 .box{
     background-color: #002B5C;
-    border-radius: 50px;
+    border-radius: 50px; /*makes the box round at corners*/
     padding: 10px;
-    aspect-ratio: 1.5;
-    text-align: center;
-    overflow: hidden;
+    aspect-ratio: 1.5; /*makes the box at the shape of rectangle(=1 it will be a square)*/
+    overflow: hidden; /* hides anything that is outside the box*/
 }
 .box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%;/*makes all the width of the img visible*/
+    height: 100%;/*makes all the length of the img visible*/
+    object-fit: cover;/*the img will resize to fit the container with no stretch*/
     object-position: center;
     border-radius: 50px;
 }
 @media (max-width: 1200px) {
     .grid-container {
-        grid-template-columns: repeat(2,1fr); /* Stack title and photo vertically */
+        grid-template-columns: repeat(2,1fr); /* Stack with 2 columns */
     }
 }
 @media (max-width: 800px) {
     .grid-container {
-        grid-template-columns: repeat(1,1fr); /* Stack title and photo vertically */
+        grid-template-columns: repeat(1,1fr); /* Stack with 1 column */
     }
 }
