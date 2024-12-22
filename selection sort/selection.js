@@ -14,19 +14,24 @@ async function selectionSort(){
     for(let i=0;i<bars.length;i++){
         let min=bars[i];
         bars[i].style.backgroundColor='#FF5733';
-        await new Promise(resolve => setTimeout(resolve, 400));
+        bars[i].classList.add('show-arrow');
+        await new Promise(resolve => setTimeout(resolve, 1000));
         for(let j=i+1;j<bars.length;j++){
             if(parseInt(bars[j].style.height)<parseInt(min.style.height)){
                 min.style.backgroundColor='#002B5C';
                 min=bars[j];
                 bars[j].style.backgroundColor='#FF5733';
             }
-            await new Promise(resolve => setTimeout(resolve, 400));
+            bars[j].classList.add('show-arrow');
+            bars[i].classList.remove('show-arrow');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            bars[j].classList.remove('show-arrow');
         }
         min.style.backgroundColor='#002B5C';
         let temp=bars[i].style.height;
         bars[i].style.height=min.style.height;
         min.style.height=temp;
+        bars[i].classList.remove('show-arrow');
     }
 }
 sortButton.addEventListener('click', () => {selectionSort();});
