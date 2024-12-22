@@ -16,32 +16,31 @@ h1{
     height: 300px;
     border: 3px solid #002B5C;
     padding: 50px;
-    display: inline-flex;
-    align-items: flex-end;
+    display: flex;
+    flex-direction: row;/*the bars will be next to each other*/
+    align-items: flex-end;/*Moves all the flex items so their edges align with the end of the cross axis.*/
     padding-bottom: 0;
     padding-top: 100px;
     justify-content: space-evenly;
 }
 .bar{
-    position: relative;
+    position: relative;/*in order to position the arrow (positioned relative to its normal position)*/
     width: 30px;
-    margin-bottom: 0;
-    margin-left: 5px;
     background-color: #002B5C;
-    transition:0.5s;
+    transition:0.5s;/*for animation*/
 }
 button {
-    margin-top: 20px;
+    margin-top: 25px;
     padding: 10px;
     background-color: #002B5C;
     color: #F5F5F5;
     border-radius: 20px;
-    cursor: pointer;
+    cursor: pointer;/*changes the cursor when placing it on the button*/
     font-size: 16px;
 }
-.bar::after {
-    content: '';
-    position: absolute;
+.bar::after/*this will make a child of each bar which is the arrow*/{
+    content: '';/*this needs to be present*/
+    position: absolute;/*placed relative to the bar not inside it*/
     bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
@@ -51,7 +50,6 @@ button {
     opacity: 0;
     transition: opacity 0.2s, bottom 0.5s;
 }
-
 .bar.show-arrow::after {
     opacity: 1;
 }
