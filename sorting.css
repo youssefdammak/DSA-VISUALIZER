@@ -2,21 +2,21 @@ body{
     margin: 0;
     padding: 0;
     background-color: #F5F5F5;
-    display: flex;
-    flex-direction: column;
+    display: flex;/*1d layout*/
+    flex-direction: column;/*elements added to body will be under each other*/
     align-items: center;
 }
 h1{
     text-align: center;
     color: #002B5C;
-    margin-bottom: 100px;
+    margin-bottom: 100px;/*makes space between the heading and the main box*/
 }
 .main-box{
-    width: 500px;
+    width: 500px;/*fix the width and not the height to allow adding more boxes*/
     border: 3px solid #002B5C;
     padding: 50px;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: grid;/*we can use flex instead as it is 1d*/
+    grid-template-columns: 1fr;/*each box will take 1 fraction of the main box and arranged under each other*/
     row-gap: 30px;
 }
 .box{
@@ -27,5 +27,5 @@ h1{
     border-radius: 40px;
 }
 a{
-  text-decoration: none;
+  text-decoration: none;/*removes the line under the link*/
 }
