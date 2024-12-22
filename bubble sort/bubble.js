@@ -18,6 +18,8 @@ async function bubbleSort(){
         {
             bars[j].style.backgroundColor='#FF5733';
             bars[j+1].style.backgroundColor='#FF5733';
+            bars[j].classList.add('show-arrow');
+            bars[j+1].classList.add('show-arrow');
             await new Promise(resolve => setTimeout(resolve, 1000));
             if(parseInt(bars[j].style.height)>parseInt(bars[j+1].style.height))
             {
@@ -27,6 +29,8 @@ async function bubbleSort(){
             }
             bars[j].style.backgroundColor ='#002B5C';
             bars[j+1].style.backgroundColor ='#002B5C';
+            bars[j].classList.remove('show-arrow');
+            bars[j + 1].classList.remove('show-arrow');
         }
     }
 }
