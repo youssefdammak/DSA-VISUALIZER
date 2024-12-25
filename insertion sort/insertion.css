@@ -1,0 +1,55 @@
+body{
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    color: #002B5C;
+    text-align: center;
+    margin-bottom: 100px;
+}
+#box{
+    width: 500px;
+    height: 300px;
+    border: 3px solid #002B5C;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;/*the bars will be next to each other*/
+    align-items: flex-end;/*Moves all the flex items so their edges align with the end of the cross axis.*/
+    padding-bottom: 0;
+    padding-top: 100px;
+    justify-content: space-evenly;
+}
+.bar{
+    position: relative;/*in order to position the arrow (positioned relative to its normal position)*/
+    width: 30px;
+    background-color: #002B5C;
+    transition:0.5s;/*for animation*/
+}
+button {
+    margin-top: 25px;
+    padding: 10px;
+    background-color: #002B5C;
+    color: #F5F5F5;
+    border-radius: 20px;
+    cursor: pointer;/*changes the cursor when placing it on the button*/
+    font-size: 16px;
+}
+.bar::after/*this will make a child of each bar which is the arrow*/{
+    content: '';/*this needs to be present*/
+    position: absolute;/*placed relative to the bar not inside*/
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #002B5C;
+    opacity: 0;
+    transition: opacity 0.2s, bottom 0.5s;
+}
+.bar.show-arrow::after {
+    opacity: 1;
+}
