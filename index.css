@@ -8,6 +8,8 @@ h1{
     text-align: center;
     background-color: #002B5C;
     margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 5px;
     border-radius:100px;
 }
