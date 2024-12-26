@@ -1,4 +1,4 @@
-const data=[20,45,50,55,60,70,80,85,90,100,105,110,115,120];
+const data=[20,45,50,55,60,70,80,85,90,100,105,110,115,120,125,130,135,140,150,155,160,170,185,190];
 const box=document.getElementById('box');
 function setBoxes(box,x){
     const smallBox=document.createElement('div');
@@ -6,7 +6,7 @@ function setBoxes(box,x){
     smallBox.textContent=x;
     box.appendChild(smallBox);
 }
-for(let i=0;i<14;i++){
+for(let i=0;i<data.length;i++){
     setBoxes(box,data[i]);
 }
 function hideBoxes(left,right,boxes){
