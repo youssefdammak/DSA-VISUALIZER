@@ -33,18 +33,7 @@ async function insertionSort() {
             bars[j + 1].style.height = bars[j].style.height;
             j = j - 1;
         }
-        if(j+1!=i){
-            bars[j+1].style.backgroundColor='#FF5733';
-            bars[i].style.backgroundColor='#FF5733';
-            bars[j+1].classList.add('show-arrow');
-            bars[i].classList.add('show-arrow');
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            bars[j + 1].style.height = key;
-            bars[j+1].style.backgroundColor='#002B5C';
-            bars[i].style.backgroundColor='#002B5C';
-            bars[j+1].classList.remove('show-arrow');
-            bars[i].classList.remove('show-arrow');
-        }
+        bars[j + 1].style.height = key;
     }
 }
 sortButton.addEventListener('click', () => {insertionSort();});
