@@ -35,6 +35,6 @@ remove.addEventListener('click', () => {
         addedNodes-=1;
     }
     else{
-        alert("Linked List has no elements to remove");
+        alert("Linked List has no elements to remove!");
     }
 });
